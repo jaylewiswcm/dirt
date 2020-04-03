@@ -179,9 +179,18 @@ const urlInfo = "?autoplay=0&showinfo=0&controls=0&rel=0$enablejsapi=1&modestbra
 const fullVideo = (e) => {
 
   if (window.screen.width > "643px") {
-
+    var name = event.srcElement.getElementsByClassName("colSource")[0].src;
+    col.scrollIntoView();
+    videoFl.src = name + urlInfo;
     // console.log(event.srcElement);
-    event.srcElement.controls = true;
+
+    // videoFl.load();
+    // videoFl.play();
+
+
+    fullCon.style.display = "block";
+    // console.log(event.srcElement);
+    // event.srcElement.controls = true;
   } else {
     var name = event.srcElement.getElementsByClassName("colSource")[0].src;
     col.scrollIntoView();
@@ -199,19 +208,19 @@ const fullVideo = (e) => {
 // Image Modal for gallery - NOT Being Used
 const imgModal = document.getElementById("gallery-modal");
 // Displaying the modal and image 2x biggere
-const imgGallery = (e) => {
-  //Splitting the src element at .png so can add @2x.png
-  imgModal.style.display = "block";
-  const img = document.getElementById("clickedImg");
+// const imgGallery = (e) => {
+//   //Splitting the src element at .png so can add @2x.png
+//   imgModal.style.display = "block";
+//   const img = document.getElementById("clickedImg");
 
-  var str = event.srcElement.src;
-  // var array = str.split(".");
-  // img.src = array[0] + "." + array[1] + "." + array[2] + "@2x.png";
-  var array = str.split(".");
-  img.src = array[0] + "@2x.png";
-  // console.log(event.srcElement.src);
-  // console.log(array[0] + "@2x.png");
-}
+//   var str = event.srcElement.src;
+//   // var array = str.split(".");
+//   // img.src = array[0] + "." + array[1] + "." + array[2] + "@2x.png";
+//   var array = str.split(".");
+//   img.src = array[0] + "@2x.png";
+//   // console.log(event.srcElement.src);
+//   // console.log(array[0] + "@2x.png");
+// }
 // Close for cross
 const closeModal = () => {
   imgModal.style.display = "none";
