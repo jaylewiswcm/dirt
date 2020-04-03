@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="55.095" height="46.594" viewBox="0 0 55.095 46.594">
+  <defs>
+    <linearGradient id="linear-gradient" x1="1.373" y1="-0.243" x2="0.033" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#cb403d"/>
+      <stop offset="1" stop-color="#ff8c00"/>
+    </linearGradient>
+    <filter id="Polygon_2" x="0" y="0" width="42.729" height="46.594" filterUnits="userSpaceOnUse">
+      <feOffset dy="2" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <linearGradient id="linear-gradient-2" x1="1.404" y1="-0.155" x2="0.032" xlink:href="#linear-gradient"/>
+    <filter id="Polygon_3" x="12.365" y="0" width="42.729" height="46.594" filterUnits="userSpaceOnUse">
+      <feOffset dy="2" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-2"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_265" data-name="Group 265" transform="translate(9 7)">
+    <g transform="matrix(1, 0, 0, 1, -9, -7)" filter="url(#Polygon_2)">
+      <path id="Polygon_2-2" data-name="Polygon 2" d="M11.7,4.492a3,3,0,0,1,5.194,0l9.1,15.736a3,3,0,0,1-2.6,4.5H5.2a3,3,0,0,1-2.6-4.5Z" transform="translate(33.73 7) rotate(90)" fill="url(#linear-gradient)"/>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, -9, -7)" filter="url(#Polygon_3)">
+      <path id="Polygon_3-2" data-name="Polygon 3" d="M11.7,4.492a3,3,0,0,1,5.194,0l9.1,15.736a3,3,0,0,1-2.6,4.5H5.2a3,3,0,0,1-2.6-4.5Z" transform="translate(46.09 7) rotate(90)" fill="url(#linear-gradient-2)"/>
+    </g>
+  </g>
+</svg>

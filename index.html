@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+  <link rel="stylesheet" type="text/css" href="/css/responsive.css" />
+  <link rel="stylesheet" type="text/css" href="/css/slick.css">
+
+  <link rel="shortcut icon" href="#">
+
+  <link href="https://fonts.googleapis.com/css?family=Lacquer&display=swap" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <title>Dirt</title>
+</head>
+
+<body onload="trackInit()">
+  <div class="home">
+    <div id="modal">
+      <div class="video-con">
+        <img id="exit-cross" src="/assets/images/exit-cross.svg"></img>
+        <video id="video-popup" controls>
+          <source src="/assets/videos/damn-that-river.mp4" type="video/mp4">
+          Your browser does not support HTML5 video.
+        </video>
+      </div>
+    </div>
+    <img id="burger-menu" src="/assets/images/burger-new.svg"></img>
+    <div id="menu">
+      <img src="/assets/images/menu-cross.svg" id="menu-cross" />
+      <ul class="menu-ul">
+        <li><a href="/">Home</a></li>
+        <li><a href="#tour">Dates</a></li>
+        <li><a href="#collection">Collection</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#band">The Band</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <nav class="navbar" id="top-menu">
+      <ul class="nav-ul">
+        <li><a href="#tour">Dates</a></li>
+        <li><a href="#collection">Collection</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#band">The Band</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <img id="corner-img" src="/assets/images/video.svg"> </img>
+    <div class="title-wrapper">
+      <h1 class="dirt-header">DIRT</h1>
+      <h2 class="an">AN</h2>
+      <h2 class="dirt-subheader">ALICE IN CHAIN TRIBUTE</h2>
+    </div>
+    <div class="down-btn">
+      <a href="#tour"><img class="down-pic" src="/assets/images/down-pic.svg"> </img>
+      </a>
+    </div>
+    <div class="player-con">
+      <audio id="player" ontimeupdate="updateProgress()">
+        <source id="source">
+      </audio>
+      <div class="controls">
+        <i class="back icons" onclick="lastTrack()"></i>
+        <i class="play-pause icons" onclick="playAudio()" id="play"></i>
+        <i class="next icons" onclick="next()"></i>
+        <progress id="progress" value="0" max="100"></progress>
+        <span id="currentlyPlayingSong"><span id="currentSong"></span></span>
+      </div>
+    </div>
+  </div>
+  <div id="tour"></div>
+  <h1 class="titles">Tour</h1>
+  <div class="dates-con">
+    <table>
+      <tr>
+        <th>date</th>
+        <th>venue</th>
+        <th>city</th>
+        <th>tickets</th>
+      </tr>
+      <tr class="row-white">
+        <td class="date">11.10.19</td>
+        <td>The Fleece</td>
+        <td>Bristol</td>
+        <td><a href="https://www.ticketmaster.co.uk/" class="ticket-link">For Sale</a></td>
+      </tr>
+      <tr>
+        <td class="date">25.10.19</td>
+        <td>Hotpot</td>
+        <td>Cardiff</td>
+        <td><a href="/" class="ticket-link">For Sale</a></td>
+      </tr>
+      <tr class="row-white">
+        <td class="date">30.10.19</td>
+        <td>Junction</td>
+        <td>Plymouth</td>
+        <td><a href="/" class="ticket-link">For Sale</a></td>
+      </tr>
+      <tr>
+        <td class="date">05.11.19</td>
+        <td>The Rise Inn</td>
+        <td>Bath</td>
+        <td><a href="/" class="ticket-link">For Sale</a></td>
+      </tr>
+      <tr class="row-white">
+        <td class="date">06.11.19</td>
+        <td>02 Academy</td>
+        <td>Bristol</td>
+        <td><a href="/" class="ticket-link">For Sale</a></td>
+      </tr>
+      <tr>
+        <td class="date">13.11.19</td>
+        <td>Scholar</td>
+        <td>Newcastle</td>
+        <td><a href="/" class="ticket-link">For Sale</a></td>
+      </tr>
+      <tr class="row-white">
+        <td class="date">20.11.19</td>
+        <td>Castle Inn</td>
+        <td>Plymouth</td>
+        <td><a href="/" class="ticket-link">For Sale</a></td>
+      </tr>
+    </table>
+  </div>
+
+  <div id="collection" class="collection">
+    <h1 class="titles">Video Collection</h1>
+    <div class="videoFullCon" id="fullCon">
+      <video class="videoFull" id="videoFl" controls>
+        <source id="vidSource" type="video/mp4">
+        Your browser does not support HTML5 video.
+      </video>
+    </div>
+
+    <div class="videoGrid">
+
+      <div class="videoCon">
+        <video class="colVid" poster="/assets/video-placeholder/dirt1-hold.png" onclick="fullVideo()">
+          <source class="colSource" src="/assets/videos/dirt-vid1.mp4" type="video/mp4">
+          Your browser does not support HTML5 video.
+        </video>
+        <h2 class="colVidHeaders">O'Rileys, <span class="orange">Hull</span></h2>
+      </div>
+      <div class="videoCon">
+        <video class="colVid" poster="/assets/video-placeholder/sickman-hold.png" onclick="fullVideo()">
+          <source class="colSource" src="/assets/videos/sickman.mp4" type="video/mp4">
+          Your browser does not support HTML5 video.
+        </video>
+        <h2 class="colVidHeaders">"Sickman",<span class="orange">Nottingham</span></h2>
+      </div>
+      <div class="videoCon">
+        <video class="colVid" poster="/assets/video-placeholder/dirt2-hold.png" onclick="fullVideo()">
+          <source class="colSource" src="/assets/videos/dirt-vid2.mp4" type="video/mp4">
+          Your browser does not support HTML5 video.
+        </video>
+        <h2 class="colVidHeaders">Trillians, <span class="orange">Newwcastle</span></h2>
+      </div>
+      <div class="videoCon">
+        <video class="colVid" poster="/assets/video-placeholder/down-hold.png" onclick="fullVideo()">
+          <source class="colSource" src="/assets/videos/down-in-a-hole.mp4" type="video/mp4">
+          Your browser does not support HTML5 video.
+        </video>
+        <h2 class="colVidHeaders">"Down In A Hole", <span class="orange">Hull</span></h2>
+      </div>
+      <div class="videoCon">
+        <video class="colVid" poster="/assets/video-placeholder/junkman-hold.png" onclick="fullVideo()">
+          <source class="colSource" src="/assets/videos/junkhead.mp4" type="video/mp4">
+          Your browser does not support HTML5 video.
+        </video>
+        <h2 class="colVidHeaders">Newcastle, <span class="orange">England</span></h2>
+      </div>
+      <div class="videoCon">
+        <video class="colVid" poster="/assets/video-placeholder/frogs-hold.png" onclick="fullVideo()">
+          <source class="colSource" src="/assets/videos/frogs.mp4" type="video/mp4">
+          Your browser does not support HTML5 video.
+        </video>
+        <h2 class="colVidHeaders">"Frogs", <span class="orange">Nottingham</span></h2>
+      </div>
+      <!-- <div class="videoCon">
+        <video class="colVid" poster="/assets/video-placeholder/damn-hold.png" onclick="fullVideo()">
+          <source class="colSource" src="/assets/videos/damn-that-river.mp4" type="video/mp4">
+          Your browser does not support HTML5 video.
+        </video>
+        <h2 class="colVidHeaders">Cardiff, <span class="orange">Wales</span></h2>
+      </div> -->
+    </div>
+  </div>
+  <div id="gallery" class="gallery">
+    <div id="gallery-modal">
+      <div class="imgCon">
+        <img id="exit-modal" src="/assets/images/exit-cross.svg" onclick="closeModal()"></img>
+        <img id="clickedImg" src="/assets/gallery/img3@2x.png"> </img>
+      </div>
+    </div>
+    <h1 class="titles" id="gallery-title">Photo Wall</h1>
+    <div class="gallery-grid">
+      <img src="/assets/gallery/img1.png" class="gallery-img n1" onclick="imgGallery()">
+      </img>
+      <img src="/assets/gallery/img2.png" class="gallery-img n2" onclick="imgGallery()"></img>
+      <img src="/assets/gallery/img3.png" class="gallery-img n3" onclick="imgGallery()"> </img>
+      <img src="/assets/gallery/img4.png" class="gallery-img n4" onclick="imgGallery()"></img>
+      <img src="/assets/gallery/img5.png" class="gallery-img n5" onclick="imgGallery()"></img>
+      <img src="/assets/gallery/img6.png" class="gallery-img n6" onclick="imgGallery()"></img>
+      <img src="/assets/gallery/img7.png" class="gallery-img n7" onclick="imgGallery()"></img>
+      <img src="/assets/gallery/img8.png" class="gallery-img n8" onclick="imgGallery()"></img>
+      <img src="/assets/gallery/img9.png" class="gallery-img n9" onclick="imgGallery()"></img>
+      <img src="/assets/gallery/img10.png" class="gallery-img n10" onclick="imgGallery()"></img>
+      <img src="/assets/gallery/img11.png" class="gallery-img n11" onclick="imgGallery()"></img>
+      <img src="/assets/gallery/img13.png" class="gallery-img n13" onclick="imgGallery()"></img>
+      <img src="/assets/gallery/image15.png" class="gallery-img n14" onclick="imgGallery()"></img>
+    </div>
+  </div>
+  <div id="band" class="theBand">
+    <h1 class="titles" id="bandTitle">The Band</h1>
+    <div class="band-bio">
+      <p class="bio-p"> We are an Alice In Chains tribute band from Wales UK, bringing you the sound and feel of
+        Seattle's
+        finest grunge metal band, with energetic live performances. Our band consists of
+        <strong class="bio-name"> Mark Southcombe</strong> on Vocals/Guitar, <strong class="bio-name">Sam Bateman
+        </strong> on Guitar/Vocal, <strong class="bio-name">
+          Andrew
+          Gibbons</strong>
+        on Bass
+        and <strong class="bio-name">Rhodri Jones</strong>
+        on
+        Drums/Vocals. </p>
+    </div>
+    <div class="band-grid">
+      <div class="mate">
+        <h1 class="member-titles">Mark</h1>
+        <img class="member-img" src="/assets/images/vocals@2x.png" />
+      </div>
+      <div class="mate">
+        <h1 class="member-titles">Sam</h1>
+        <img class="member-img" src="/assets/images/guitar@2x.png" />
+      </div>
+      <div class="mate">
+        <h1 class="member-titles">Andrew</h1>
+        <img class="member-img" src="/assets/images/bass@2x.png" />
+      </div>
+      <div class="mate">
+        <h1 class="member-titles">Rhodri</h1>
+        <img class="member-img" src="/assets/images/drummer@2x.png" />
+      </div>
+    </div>
+  </div>
+  <!-- <div class="blackHeader"></div> -->
+  <div id="contact">
+
+    <div class="form-con">
+      <h1 class="dirt-header" id="dirtinForm">Dirt</h1>
+      <h2 class="contact-headers" id="messageHeader">Leave us a <span class="orange">message</span></h2>
+      <form>
+        <input type="text" id="name" placeholder="Name"></input>
+        <input type="text" id="email" placeholder="Email Address"></input>
+        <input type="text" id="message" placeholder="Enter Message"></input>
+        <input type="submit" id="submit" placeholder="Submit"></input>
+      </form>
+    </div>
+
+    <div class="contact-right">
+      <h2 class="contact-headers black-bg">Contact us</h2>
+      <div class="contact-con">
+        <div class="socials-left">
+          <h2 class="con-headers">Socials</h2>
+          <h3 class="contact-content">Facebook</h3>
+          <h3 class="contact-content">Twitter</h3>
+          <h3 class="contact-content">Instagram</h3>
+        </div>
+        <div class="con-right">
+          <h2 class="con-headers">Contact Information</h2>
+          <h3 class="contact-content">marksouth46@gmail.com</h3>
+          <h3 class="contact-content">07976 925415</h3>
+        </div>
+      </div>
+      <div class="responsive-contact">
+        <h2 class="con-headers">Contact Information</h2>
+        <h3 class="contact-content">marksouth46@gmail.com</h3>
+        <h3 class="contact-content">07976 925415</h3>
+      </div>
+      <div class="responsive-socials">
+        <h2 class="con-headers">Socials</h2>
+        <h3 class="contact-content">Facebook</h3>
+        <h3 class="contact-content">Twitter</h3>
+        <h3 class="contact-content">Instagram</h3>
+      </div>
+      <!-- <div class="img-con"><img class="bandImg" src="/assets/bandimg1@2x.png"></img> </div> -->
+      <h3 class="enquiries">For any <span class="orange">website queries</span> email jr_lewis@outlook.com </h3>
+    </div>
+  </div>
+
+
+  <!-- <div class="social-footer">
+    <div class="socials">
+      <h3 class="details">Facebook</h3>
+      <h3 class="details">Twitter</h3>
+      <h3 class="details">Instagram</h3>
+    </div>
+    <div class="contact">
+      <h3 class="details">Contact Information</h3>
+      <h3 class="details">marksouth46@gmail.com</h3>
+      <h3 class="details">07976 925415</h3>
+    </div>
+    <div class="enquiries">
+      <h3 class="details">Website enquiries</h3>
+      <h3 class="details">Jr_lewis@outlook.com</h3>
+    </div>
+  </div> -->
+
+
+  <script type="text/javascript" src="/js/script.js"></script>
+  <script type="text/javascript" src="/js/slick.min.js"></script>
+
+
+
+</body>
+
+</html>

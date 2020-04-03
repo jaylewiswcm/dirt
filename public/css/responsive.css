@@ -1,0 +1,323 @@
+@media (max-width: 642px) {
+  .body {
+    overflow-x: hidden;
+  }
+
+  .navbar {
+    display: none;
+  }
+
+  #burger-menu {
+    display: block;
+    width: 60px;
+    cursor: pointer;
+    float: right;
+    position: fixed;
+
+    right: 10px;
+    top: 10px;
+
+    z-index: 1;
+  }
+
+  #menu {
+    /* display: block; */
+    display: none;
+    background: rgba(9, 9, 9);
+    ;
+    width: 100px;
+    padding: 0;
+    position: fixed;
+    margin-top: 0px;
+
+    right: 0px;
+
+    font-size: 16px;
+    padding-top: 30px;
+    padding-left: 5px;
+    z-index: 2;
+    /* position: relative; */
+  }
+
+  #menu-cross {
+    position: absolute;
+    top: 2px;
+    left: 4px;
+    transform: scale(0.8);
+    cursor: pointer;
+  }
+
+  .menu-ul {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    text-align: right;
+  }
+
+  .menu-ul a {
+    padding-bottom: 15px;
+    text-align: right;
+  }
+
+  .menu-ul li {
+    float: right;
+    text-align: right;
+  }
+
+  #corner-img {
+    display: none;
+  }
+
+  .home {
+    background-position-x: -220px;
+    background-position-y: 0px;
+  }
+
+  .title-wrapper {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .dirt-header {
+    text-align: center;
+    width: 100%;
+
+    /* background: #090909;
+    width: 80%;
+    border: 2px white solid; */
+  }
+
+  .an {
+    text-align: center;
+    margin: 0;
+    width: 100%;
+
+  }
+
+  .dirt-subheader {
+    text-align: center;
+    /* padding-left: -150px; */
+    background: rgba(9, 9, 9, 0.6);
+    width: 70%;
+    /* margin: 0; */
+    margin: 0 auto;
+
+    /* margin: 0 auto; */
+    padding: 10px;
+  }
+
+  .down-btn {
+    display: none;
+  }
+
+  .controls {
+    width: 100%;
+  }
+
+  .icons {
+    /* border: 2px white solid; */
+    margin-top: 15px;
+    width: 40px;
+    height: 40px;
+  }
+
+
+  #progress {
+    width: 30%;
+  }
+
+  /*    Tour      */
+
+  table {
+    width: 90%;
+  }
+
+  th {
+    font-size: 20px;
+    /* font-size: 90%; */
+  }
+
+  td {
+    font-size: 17px;
+    /* font-size: 80%; */
+  }
+
+
+  /*   Collection     */
+  .section-title {
+    text-align: center;
+    margin-left: 0px;
+  }
+
+  .video-title {
+    font-size: 17px;
+    text-align: center;
+  }
+
+  .cntrl {
+    margin-top: 10px;
+  }
+
+  .fullscreen {
+    display: none;
+  }
+
+  .volume-cntrl {
+    display: none;
+  }
+
+  /*       The Band       */
+  .band-bio {
+    /* font-size: 17px; */
+    font-size: 85%;
+
+  }
+
+  /*      Contact         */
+
+  .bookus {
+    /* background: #242424; */
+    width: 100%;
+    text-align: center;
+
+  }
+
+  .contact-headers {
+    font-size: 18px;
+  }
+
+  .contact-h {
+    font-size: 20px;
+
+  }
+
+  .social-table {
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  form input,
+  textarea {
+    width: 80%;
+  }
+
+  .social-footer {
+    width: 100%;
+    height: 55px;
+    /* border: 2px white solid; */
+    padding: 0;
+    padding-left: -50px;
+  }
+
+  .details {
+    font-size: 10px;
+  }
+
+  .socials {
+    margin-left: 0px;
+  }
+
+  .videoGrid {
+    margin: 0 5%;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .contact {
+    grid-template-columns: 1fr;
+
+  }
+
+  .form-con {
+    display: none;
+  }
+
+  .contact-con {
+    display: none;
+  }
+
+  .responsive-contact {
+    background: #090909;
+    box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.4);
+    display: block;
+    text-align: center;
+
+  }
+
+  .responsive-socials {
+    width: 35%;
+    text-align: center;
+    margin: 0 auto;
+    /* padding-top: 5px; */
+    height: 190px;
+    background: #090909;
+    box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.4);
+    display: block;
+  }
+
+}
+
+@media (min-width: 643px) and (max-width: 1200px) {
+  .home {
+    background-position-y: 0px;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 890px) {
+  #progress {
+    width: 40%;
+  }
+
+}
+
+@media (max-width: 362px) {
+
+  /* Tour */
+  table {
+    width: 80%;
+  }
+
+  th {
+    font-size: 16px;
+    /* font-size: 90%; */
+  }
+
+  td {
+    font-size: 12px;
+    /* font-size: 80%; */
+  }
+
+  /* Social Footer */
+  .social-footer {
+    grid-template-columns: 40% 60%;
+  }
+
+  .details {
+    font-size: 13px;
+  }
+
+  .enquiries {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+
+  .cntrl {
+    transform: scale(0.8);
+  }
+}
+
+@media (min-width: 643px) and (max-width: 1032px) {
+  .videoGrid {
+
+    grid-template-columns: repeat(2, 1fr);
+
+  }
+}
+
+@media (min-width: 643px) {
+  .videoCon:hover {
+    transform: scale(1.1)
+  }
+}
