@@ -1,15 +1,22 @@
 // Array of showcase songs
 const songs = [
   "damn.mp3",
-  "altered.mp3",
-  "rage.mp3",
-  "sonny.mp3"
+  "frogs.mp3",
+  "down-in-a-hole.mp3",
+  "sickman.mp3"
+]
+
+const names = [
+  "Damn that river - Live",
+  "Frogs - Live",
+  "Down In A Hole - Live",
+  "Sickman - Live"
 ]
 const source = document.getElementById("source");
 const player = document.getElementById("player");
 const play = document.getElementById("play");
 // Setting the source of song on page load
-var a;
+var a = 2;
 const whatsA = () => {
   if (a == null) {
     a = 0;
@@ -20,11 +27,11 @@ const whatsA = () => {
   }
   return a;
 }
-whatsA();
+// whatsA();
 const trackInit = () => {
-  source.src = "/assets/audio/" + songs[a];
+  source.src = "/assets/audio/" + songs[2];
   player.load();
-  document.getElementById("currentSong").innerText = "Damn that river - Live Bristol 21/09/19";
+  document.getElementById("currentSong").innerText = names[2];
 }
 // Playing/pausing audio when icon is clicked
 const playAudio = () => {
@@ -35,6 +42,7 @@ const playAudio = () => {
     player.pause();
     play.removeAttribute("id");
   }
+
 }
 // Loop songs once they've finished
 player.addEventListener('ended', () => {
@@ -47,33 +55,44 @@ player.addEventListener('ended', () => {
 // Skipping audio to next song
 const next = () => {
   // To loop the tracks
-  if (a == 0) {
-    a = 1;
-  } else if (a == 4) {
+  a = a + 1;
+
+  if (a > 3) {
     a = 0;
   }
-  source.src = "/assets/audio/" + songs[a++];
+  source.src = "/assets/audio/" + songs[a];
+  document.getElementById("currentSong").innerText = names[a];
   if (player.paused) {
     player.play();
     play.setAttribute("id", "pause");
   }
   player.load();
   player.play();
+
+  return a;
 }
 // Skipping audio to next song
 const lastTrack = () => {
-  if (a == -1) {
-    a = 3;
+
+  if (a < 0) {
+    a = 4;
   }
-  source.src = "/assets/audio/" + songs[a--];
+  a = a - 1;
+  if (a == -1) {
+    a = 3
+  }
+
+  source.src = "/assets/audio/" + songs[a];
+  document.getElementById("currentSong").innerText = names[a];
   if (player.paused) {
     player.play();
     play.setAttribute("id", "pause");
   }
   player.load();
   player.play();
-  // console.log(source);
-  // console.log(a);
+
+
+  return a;
 }
 if (player.currentTime == player.duration) {
   source.src = "/assets/audio/" + songs[a++];
@@ -107,6 +126,8 @@ const burger = document.getElementById("burger-menu");
 const menu = document.getElementById("menu");
 const menuCross = document.getElementById("menu-cross");
 const topMenu = document.getElementById("top-menu");
+const navbar = document.getElementsByClassName("navbar");
+
 
 var x = 0;
 
@@ -122,26 +143,31 @@ $(window).resize(function () {
   var wH = $(window).height();
   var wW = $(window).width();
   var wS = $(this).scrollTop();
-  if (wW > 640 && wS < 80) {
+  if (wW > 721 && wS < 80) {
     burger.style.display = "none";
     menu.style.display = "none";
-  } else if (wW < 640) {
+    videoCon.style.display = "block";
+    topMenu.style.display = "inline-block";
+  } else if (wW <= 720) {
+    videoCon.style.display = "none";
+    topMenu.style.display = "none";
     burger.style.display = "block";
+
   }
 });
 // On scroll show burger menu on desktop
-$(window).scroll(function () {
-  var wH = $(window).height();
-  var wW = $(window).width();
-  var wS = $(this).scrollTop();
+// $(window).scroll(function () {
+//   var wH = $(window).height();
+//   var wW = $(window).width();
+//   var wS = $(this).scrollTop();
 
-  if (wW > 640 && wS > 80) {
-    burger.style.display = "block";
-  } else if (wW > 640 && wS < 80) {
-    burger.style.display = "none";
-    menu.style.display = "none"
-  }
-})
+//   if (wW > 720 && wS > 80) {
+//     burger.style.display = "block";
+//   } else if (wW >= 720 && wS < 80) {
+//     burger.style.display = "none";
+//     menu.style.display = "none"
+//   }
+// })
 
 const vidSrc = document.getElementById("vidSource");
 const fullCon = document.getElementById("fullCon");
@@ -154,13 +180,13 @@ const fullVideo = (e) => {
 
   if (window.screen.width > "643px") {
 
-    console.log(event.srcElement);
+    // console.log(event.srcElement);
     event.srcElement.controls = true;
   } else {
     var name = event.srcElement.getElementsByClassName("colSource")[0].src;
     col.scrollIntoView();
     videoFl.src = name + urlInfo;
-    console.log(event.srcElement);
+    // console.log(event.srcElement);
 
     // videoFl.load();
     // videoFl.play();

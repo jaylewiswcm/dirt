@@ -190,6 +190,11 @@ li a {
   font-size: 90px;
 }
 
+#dirtLink {
+  color: white;
+  text-decoration: none;
+}
+
 .an {
   margin-top: -23px;
   margin-left: 220px;
@@ -468,6 +473,7 @@ td {
 .black {
   color: black;
   padding-top: 20px;
+
 }
 
 .colModal {
@@ -790,10 +796,13 @@ td {
   display: grid;
   grid-template-columns: 40% 60%;
 
+  background: white;
+
   width: 100%;
   height: 100%;
-  background: white;
 }
+
+
 
 .form-con {
   background: #090909;
@@ -802,10 +811,19 @@ td {
 
 
   text-align: center;
-  box-shadow: 4px 0px 6px rgba(0, 0, 0, 0.4);
+  box-shadow: 2px 0px 6px rgba(0, 0, 0, 0.4);
   z-index: 1;
   padding-top: 25px;
+}
 
+.contact-right {
+  display: grid;
+  grid-template-columns: 1fr;
+  text-align: left;
+  grid-row-gap: 5%;
+  background: white;
+  /* margin-top: 50px; */
+  padding: 0 10%;
 }
 
 #dirtinForm {
@@ -855,14 +873,7 @@ td {
 
 }
 
-.contact-right {
-  display: grid;
-  grid-template-columns: 1fr;
-  text-align: left;
-  grid-row-gap: 5%;
 
-  margin: 0 10%;
-}
 
 .black-bg {
   background: #090909;

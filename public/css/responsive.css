@@ -1,8 +1,4 @@
-@media (max-width: 642px) {
-  .body {
-    overflow-x: hidden;
-  }
-
+@media (max-width : 720px) {
   .navbar {
     display: none;
   }
@@ -65,8 +61,30 @@
     text-align: right;
   }
 
+
   #corner-img {
     display: none;
+  }
+
+}
+
+/* @media (min-width: 0) and (max-width: 465) {
+  #progress {
+    width: 30%;
+  }
+}
+
+@media (min-width: 465)and (max-width: 642px) {
+
+} */
+
+@media (max-width: 642px) {
+  .body {
+    overflow-x: hidden;
+  }
+
+  #progress {
+    width: 60%;
   }
 
   .home {
@@ -123,9 +141,9 @@
   }
 
 
-  #progress {
-    width: 30%;
-  }
+  /* #progress {
+    width: 60%;
+  } */
 
   /*    Tour      */
 
@@ -167,6 +185,15 @@
     display: none;
   }
 
+  /*         Gallery         */
+  /* .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+
+}
+ */
+
+
+
   /*       The Band       */
   .band-bio {
     /* font-size: 17px; */
@@ -180,6 +207,11 @@
     /* background: #242424; */
     width: 100%;
     text-align: center;
+
+  }
+
+  #contact {
+    grid-template-columns: 1fr;
 
   }
 
@@ -241,11 +273,13 @@
     box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.4);
     display: block;
     text-align: center;
+    margin: 0 auto;
+    width: 90%;
 
   }
 
   .responsive-socials {
-    width: 35%;
+    width: 50%;
     text-align: center;
     margin: 0 auto;
     /* padding-top: 5px; */
@@ -296,8 +330,19 @@
     font-size: 13px;
   }
 
+  #contact {
+    position: relative;
+    padding-bottom: 25px;
+  }
+
+
+
   .enquiries {
-    display: none;
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    font-size: 13px;
   }
 }
 
@@ -319,5 +364,20 @@
 @media (min-width: 643px) {
   .videoCon:hover {
     transform: scale(1.1)
+  }
+}
+
+@media (min-width: 643px) and (max-width: 950px) {
+  .contact-con {
+    grid-template-columns: 45% 55%;
+
+  }
+
+  .con-headers {
+    font-size: 16px;
+  }
+
+  .contact-content {
+    font-size: 16px;
   }
 }
