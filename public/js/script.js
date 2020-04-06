@@ -3,16 +3,16 @@ const songs = [
   "damn.mp3",
   "frogs.mp3",
   "down-in-a-hole.mp3",
-  // "sickman.mp3",
-  "test.mp3"
+  "sickman.mp3"
+
 ]
 
 const names = [
   "Damn that river - Live",
   "Frogs - Live",
   "Down In A Hole - Live",
-  // "Sickman - Live",
-  "test.mp3"
+  "Sickman - Live"
+
 ]
 const source = document.getElementById("source");
 const player = document.getElementById("player");
