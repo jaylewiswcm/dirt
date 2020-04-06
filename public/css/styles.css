@@ -499,9 +499,11 @@ td {
 
 .videoFull {
   width: 90%;
+  /* height: 50vh; */
   display: inline-block;
   outline: none;
   border: 3px #090909 solid;
+  background:#090909;
   box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.4);
 }
 
