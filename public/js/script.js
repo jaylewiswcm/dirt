@@ -168,26 +168,26 @@ const urlInfo =
   "?autoplay=0&showinfo=0&controls=0&rel=0$enablejsapi=1&modestbranding=1";
 
 const fullVideo = e => {
-  if (window.screen.width > "643px") {
-    var name = event.srcElement.getElementsByClassName("colSource")[0].src;
-    col.scrollIntoView();
-    videoFl.src = name + urlInfo;
-    // console.log(event.srcElement);
-    // videoFl.load();
-    // videoFl.play();
-    fullCon.style.display = "block";
-    // console.log(event.srcElement);
-    // event.srcElement.controls = true;
-  } else {
-    var name = event.srcElement.getElementsByClassName("colSource")[0].src;
-    col.scrollIntoView();
-    videoFl.src = name + urlInfo;
-    // videoFl.load();
-    // videoFl.play();
-    fullCon.style.display = "block";
-  }
+
+  var name = event.srcElement.getElementsByClassName("colSource")[0].src;
+  col.scrollIntoView();
+  videoFl.src = name + urlInfo;
+
   fullCon.style.display = "block";
 };
+const link = "https://www.youtube.com/embed/";
+const phoneVideo = e => {
+
+  var newName = event.target.nextElementSibling.children[0].src;
+
+  // var name = event.srcElement.getElementsByClassName("colSource")[0].src;
+  col.scrollIntoView();
+  videoFl.src = newName + urlInfo;
+  console.log(newName);
+
+  fullCon.style.display = "block";
+};
+
 
 // var tag = document.createElement("script");
 

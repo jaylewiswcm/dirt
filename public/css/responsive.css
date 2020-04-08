@@ -13,7 +13,7 @@
     right: 10px;
     top: 10px;
 
-    z-index: 1;
+    z-index: 100;
   }
 
   #menu {
@@ -235,6 +235,19 @@
   .videoGrid {
     margin: 0 5%;
     grid-template-columns: repeat(1, 1fr);
+  }
+
+  .galleryPlay {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    top: 50%;
+    left: 50%;
+    margin-left: -40px;
+    margin-top: -50px;
+    z-index: 20;
+    cursor: pointer;
+    display: block;
   }
 
   .videoFullCon {

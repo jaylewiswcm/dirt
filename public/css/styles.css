@@ -84,7 +84,7 @@ li a {
 
   right: 10px;
   top: 80px;
-  z-index: 2;
+  z-index: 2000;
 }
 
 #menu {
@@ -160,6 +160,7 @@ li a {
   margin: 3% auto;
   text-align: center;
 }
+
 
 #video-popup {
   width: 95%;
@@ -449,9 +450,11 @@ td {
 
   z-index: 90;
 }
-/* iframe {
-  display: block;
-} */
+
+.galleryPlay {
+  display: none;
+}
+
 .colVid {
   width: 100%;
   height: 100%;
