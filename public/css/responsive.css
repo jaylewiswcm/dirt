@@ -64,13 +64,16 @@
     display: none;
   }
 }
+
 @media (max-width: 642px) {
   #progress {
     width: 40%;
   }
+
   .videoGrid {
     margin: 0 0;
   }
+
   .videoCon {
     margin-left: -3px;
   }
@@ -80,6 +83,7 @@
   .body {
     overflow-x: hidden;
   }
+
   /* 
   #progress {
     width: 60%;
@@ -233,6 +237,18 @@
     grid-template-columns: repeat(1, 1fr);
   }
 
+  .videoFullCon {
+    margin: 0 auto;
+    width: 95%;
+    margin-bottom: 50px;
+  }
+
+  .videoFull {
+    width: 95%;
+    height: 200px;
+  }
+
+
   .contact {
     grid-template-columns: 1fr;
   }
@@ -347,6 +363,7 @@
     grid-row-end: 0;
     display: none;
   }
+
   .enquiries {
     display: block;
     position: absolute;
@@ -357,6 +374,7 @@
     text-align: center;
     width: 100%;
   }
+
   #contact {
     position: relative;
     padding-bottom: 25px;
@@ -402,6 +420,7 @@
 }
 
 @media (max-width: 362px) {
+
   /* Tour */
   table {
     width: 80%;
@@ -421,22 +440,28 @@
   .social-footer {
     grid-template-columns: 40% 60%;
   }
+
   .details {
     font-size: 13px;
   }
+
   .responsive-contact {
     height: 150px;
   }
+
   .responsive-socials {
     margin-top: -60px;
     width: 120px;
   }
+
   .contact-content {
     font-size: 16px;
   }
+
   .con-headers {
     font-size: 18px;
   }
+
   .enquiries {
     font-size: 13px;
   }
@@ -452,6 +477,22 @@
   .videoGrid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .videoFullCon {
+    margin: 0 auto;
+    width: 500px;
+    margin-bottom: 50px;
+  }
+
+  .videoFull {
+    width: 500px;
+    height: 300px;
+  }
+
+  /* 
+  #fullCon {
+    height: 100px;
+  } */
 }
 
 @media (min-width: 643px) {
