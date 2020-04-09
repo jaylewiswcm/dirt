@@ -124,10 +124,12 @@ var x = 0;
 
 burger.onclick = () => {
   menu.style.display = "block";
+  burger.style.display = "none";
   return x;
 };
 menuCross.onclick = () => {
   menu.style.display = "none";
+  burger.style.display = "block";
 };
 // When screen size is more than 640px hide burger menu and contents
 $(window).resize(function () {

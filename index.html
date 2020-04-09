@@ -103,7 +103,7 @@
     </div>
   </div>
   <div id="tour"></div>
-  <h1 class="titles">Tour</h1>
+  <h1 id="tourTitle">Tour</h1>
   <div class="dates-con">
     <table>
       <tr>
@@ -313,10 +313,12 @@
         <span class="orange">message</span>
       </h2>
       <form action="send" method="POST">
+        <p id="formError">Form currently not working. Any messages can be sent to us through email.
+        </p>
         <input type="text" name="name" id="name" placeholder="Name"></input>
         <input type="text" id="email" placeholder="Email Address" name="email"></input>
         <input type="text" id="message" placeholder="Enter Message" name="message"></input>
-        <input type="submit" id="submit" placeholder="Submit"></input>
+        <input type="submit" id="submit" placeholder="Submit" disabled></input>
       </form>
     </div>
 

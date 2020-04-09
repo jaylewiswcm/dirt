@@ -427,6 +427,20 @@ td {
   margin-bottom: 25px;
 }
 
+#tourTitle {
+  color: white;
+  text-align: center;
+  padding: 10px 10px;
+  margin: 0 auto;
+  font-size: 28px;
+
+
+  width: 250px;
+  margin: 0 auto;
+
+  margin-bottom: 25px;
+}
+
 .videoGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -820,6 +834,7 @@ td {
   padding-top: 25px;
 }
 
+
 .contact-right {
   display: grid;
   grid-template-columns: 1fr;
@@ -828,6 +843,12 @@ td {
   background: white;
   /* margin-top: 50px; */
   padding: 0 10%;
+}
+
+#formError {
+  text-align: left;
+  /* color: #F05D5E; */
+  color: #EB5E55;
 }
 
 #dirtinForm {
