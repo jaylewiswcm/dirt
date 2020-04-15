@@ -12,7 +12,9 @@ app.engine('handlebars', exphbs());
 app.set('view engine', 'handlebars');
 
 // Body Parser Middleware
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({
+  extended: false
+}));
 app.use(bodyParser.json());
 
 
@@ -25,6 +27,10 @@ app.use(express.json());
 
 app.get("/", (req, res) => {
   res.sendFile(__dirname + "/index.html");
+})
+
+app.get("/.well-known/pki-validation/starfield.html", (req, res) => {
+  res.sendFile(__dirname + "/.well-known/pki-validation/starfield.html");
 })
 
 // app.post('/send', (req, res) => {
