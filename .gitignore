@@ -1,1 +1,4 @@
+.well-known/pki-validation/
+certs/
+
 *.mp4
