@@ -123,12 +123,13 @@ const navbar = document.getElementsByClassName("navbar");
 var x = 0;
 
 burger.onclick = () => {
-  menu.style.display = "block";
+  // menu.style.display = "block";
+  menu.style.width = "150px";
   burger.style.display = "none";
   return x;
 };
 menuCross.onclick = () => {
-  menu.style.display = "none";
+  menu.style.width = "0";
   burger.style.display = "block";
 };
 // When screen size is more than 640px hide burger menu and contents
@@ -138,7 +139,8 @@ $(window).resize(function () {
   var wS = $(this).scrollTop();
   if (wW > 721 && wS < 80) {
     burger.style.display = "none";
-    menu.style.display = "none";
+    // menu.style.display = "none";
+    menu.style.width = "0";
     cornerImg.style.display = "block";
     topMenu.style.display = "inline-block";
   } else if (wW <= 720) {
@@ -157,7 +159,8 @@ $(window).scroll(function () {
     burger.style.display = "block";
   } else if (wW >= 720 && wS < 80) {
     burger.style.display = "none";
-    menu.style.display = "none";
+    // menu.style.display = "none";
+    menu.style.width = "0";
   }
 });
 

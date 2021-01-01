@@ -17,6 +17,10 @@
   /* Legacy iOS */
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body,
 html {
   background: #090909;
@@ -95,8 +99,7 @@ li a {
 
 #burger-menu {
   display: none;
-
-  width: 60px;
+  width: 70px;
   cursor: pointer;
   float: right;
   position: fixed;
@@ -107,27 +110,24 @@ li a {
 }
 
 #menu {
-  display: none;
+  display: flex;
+  flex-direction: column;
+  width: 0;
+  height: 100%;
   background: rgba(9, 9, 9);
-
-  width: 120px;
-  padding: 0;
+  box-shadow: -5px -3px 15px rgba(0,0,0,0.18);
   position: fixed;
-  margin-top: 74px;
-
-  right: 0px;
-
-  font-size: 18px;
-
-  padding-top: 30px;
-  padding-left: 5px;
-  z-index: 2;
+  top: 0 ;
+  right: 0;
+  z-index: 19;
+  transition: 0.5s;
+  overflow: hidden;
 }
 
 #menu-cross {
   position: absolute;
-  top: 2px;
-  left: 4px;
+  right: 15px;
+  top: 90px;
   transform: scale(0.8);
   cursor: pointer;
 }
@@ -137,7 +137,10 @@ li a {
   height: 100%;
   padding: 0;
   margin: 0;
+  margin-top: 150px;
   text-align: right;
+  display: flex;
+  flex-direction: column;
 }
 
 .menu-ul a {
@@ -475,15 +478,16 @@ td {
 
 .videoCon {
   width: 100%;
-
   position: relative;
   display: block;
   background-size: cover;
   border: 3px #090909 solid;
   box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.4);
   transition: transform 0.5s;
-
   z-index: 10;
+
+  display: flex;
+  flex-direction: column;
 }
 
 .galleryPlay {
@@ -495,15 +499,10 @@ td {
   height: 100%;
   position: relative;
   background: #090909;
-
   cursor: pointer;
-
   outline: none;
 }
 
-/* .videoCon:hover {
-  transform: scale(1.1)
-} */
 
 .colVidHeaders {
   background: #090909;
