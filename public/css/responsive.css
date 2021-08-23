@@ -5,19 +5,14 @@
 
   #burger-menu {
     display: block;
-    width: 60px;
     cursor: pointer;
     float: right;
     position: fixed;
-
     right: 10px;
     top: 10px;
-
     z-index: 100;
   }
-
-  #menu {
-    /* display: block; */
+  /* #menu {
     display: none;
     background: rgba(9, 9, 9);
     width: 100px;
@@ -31,16 +26,15 @@
     padding-top: 30px;
     padding-left: 5px;
     z-index: 2;
-    /* position: relative; */
-  }
+  } */
 
-  #menu-cross {
+  /* #menu-cross {
     position: absolute;
     top: 2px;
     left: 4px;
     transform: scale(0.8);
     cursor: pointer;
-  }
+  } */
 
   .menu-ul {
     width: 100%;
@@ -416,7 +410,11 @@
     height: 190px;
     background: #090909;
     box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.4);
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 15px;
   }
 }
 

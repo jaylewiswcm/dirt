@@ -122,47 +122,55 @@ const navbar = document.getElementsByClassName("navbar");
 
 var x = 0;
 
-burger.onclick = () => {
-  // menu.style.display = "block";
-  menu.style.width = "150px";
-  burger.style.display = "none";
-  return x;
-};
-menuCross.onclick = () => {
-  menu.style.width = "0";
-  burger.style.display = "block";
-};
-// When screen size is more than 640px hide burger menu and contents
-$(window).resize(function () {
-  var wH = $(window).height();
-  var wW = $(window).width();
-  var wS = $(this).scrollTop();
-  if (wW > 721 && wS < 80) {
-    burger.style.display = "none";
-    // menu.style.display = "none";
-    menu.style.width = "0";
-    cornerImg.style.display = "block";
-    topMenu.style.display = "inline-block";
-  } else if (wW <= 720) {
-    cornerImg.style.display = "none";
-    topMenu.style.display = "none";
-    burger.style.display = "block";
-  }
-});
-// On scroll show burger menu on desktop
-$(window).scroll(function () {
-  var wH = $(window).height();
-  var wW = $(window).width();
-  var wS = $(this).scrollTop();
+// burger.onclick = () => {
+//   // menu.style.display = "block";
+//   menu.style.width = "150px";
+//   burger.style.display = "none";
+//   return x;
+// };
+// menuCross.onclick = () => {
+//   menu.style.width = "0";
+//   burger.style.display = "block";
+// };
 
-  if (wW > 720 && wS > 80) {
-    burger.style.display = "block";
-  } else if (wW >= 720 && wS < 80) {
-    burger.style.display = "none";
-    // menu.style.display = "none";
-    menu.style.width = "0";
-  }
-});
+// When screen size is more than 640px hide burger menu and contents
+// $(window).resize(function () {
+//   var wH = $(window).height();
+//   var wW = $(window).width();
+//   var wS = $(this).scrollTop();
+//   if (wW > 721 && wS < 80) {
+//     burger.style.display = "none";
+//     // menu.style.display = "none";
+//     menu.style.width = "0";
+//     cornerImg.style.display = "block";
+//     topMenu.style.display = "inline-block";
+//   } else if (wW <= 720) {
+//     cornerImg.style.display = "none";
+//     topMenu.style.display = "none";
+//     burger.style.display = "block";
+//   }
+// });
+
+// On scroll show burger menu on desktop
+// $(window).scroll(function () {
+//   var wH = $(window).height();
+//   var wW = $(window).width();
+//   var wS = $(this).scrollTop();
+
+//   if (wW > 720 && wS > 80) {
+//     burger.style.display = "block";
+//   } else if (wW >= 720 && wS < 80) {
+//     burger.style.display = "none";
+//     // menu.style.display = "none";
+//     menu.style.width = "0";
+//   }
+// });
+
+const toggleMenu  = () => {
+  const menu = document.querySelector("#menu")
+  menu.classList.toggle("menu-open")
+  console.log("Hold")
+}
 
 const vidSrc = document.getElementById("vidSource");
 // const fullCon = document.getElementById("fullCon");
