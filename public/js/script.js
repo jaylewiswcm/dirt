@@ -181,10 +181,13 @@ const urlInfo =
   "?autoplay=0&showinfo=0&controls=0&rel=0$enablejsapi=1&modestbranding=1";
 
 const fullVideo = e => {
+  var src = e.target.dataset.src;
+  console.log(src)
 
-  var name = event.srcElement.getElementsByClassName("colSource")[0].src;
+  var name = e.srcElement.getElementsByClassName("colSource")[0].src;
   col.scrollIntoView();
   videoFl.src = name + urlInfo;
+  videoFl.src = src;
 
   fullCon.style.display = "block";
 };
