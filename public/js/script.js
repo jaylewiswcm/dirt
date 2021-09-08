@@ -113,6 +113,11 @@ exit.onclick = () => {
   video.pause();
 };
 
+const closeOverlayModal = () => {
+  modal.style.display = "none";
+  video.pause();
+}
+
 // Burger menu functionality
 const burger = document.getElementById("burger-menu");
 const menu = document.getElementById("menu");
