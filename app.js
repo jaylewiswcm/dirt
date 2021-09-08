@@ -1,7 +1,4 @@
 const express = require("express");
-const bodyParser = require('body-parser');
-const exphbs = require("express-handlebars");
-const nodemailer = require("nodemailer");
 
 const favicon = require('serve-favicon');
 var path = require("path");
@@ -21,8 +18,6 @@ app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 //   extended: false
 // }));
 // app.use(bodyParser.json());
-
-
 
 
 app.use(express.static(__dirname + "/public"));
